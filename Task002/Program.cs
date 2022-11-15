@@ -7,11 +7,11 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 
 if (num1 > num2)
 {
-    Console.Write($"Max number is {num1} ");
-    Console.Write($"Min number is {num2} ");
+    Console.Write($"Max number is {num1}. ");
+    Console.Write($"Min number is {num2}. ");
 }
 else
 {
-    Console.Write($"Max number is {num2} ");
-    Console.Write($"Min number is {num1} ");
+    Console.Write($"Max number is {num2}. ");
+    Console.Write($"Min number is {num1}. ");
 }
