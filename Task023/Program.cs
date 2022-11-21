@@ -6,23 +6,23 @@
 4 | 64
 5 | 125 */
 
-Console.Write("Enter a number: ")
+Console.Write("Enter a number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 void Cube(int number)
 {
-    Console.WriteLine($"{number ->}")
+    Console.WriteLine($"{number} ->");
     int number1 = 1;
     while (number1 <= number)
     {
-        int result = number * number * number;
-        Console.WriteLine($"number1 | }");
-        Console.Write(result);
+        int result = number1 * number1 * number1;
+        Console.Write($"{number1} | ");
+        Console.WriteLine(result);
         number1 ++;
     }
     
 }
-if (number > 0)
+if (num > 0)
 {
     Cube(num); 
 }
