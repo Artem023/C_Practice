@@ -13,7 +13,7 @@ int CountDigits(int num)
         num = num / 10;
         digit++;
     }
-    return digit;   
+    return digit == 0 ? 1 : digit;    
 }
 
 int countdigits = CountDigits(number);
