@@ -8,10 +8,10 @@
 int [] CreatArrayRndInt(int size, int min, int max)
 {
     int [] array = new int[size]; // new - в опер памяти выделяется новое место под переменную
-    Random rnd = new Random();
+    Random rnd = new Random(); // Сначала нужно прописывать это
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.Next(min, max + 1);
+        array[i] = rnd.Next(min, max + 1); // потом это
     }
     return array;
 } 
