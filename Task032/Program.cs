@@ -23,17 +23,16 @@ void PrintArray(int [] array)
     Console.WriteLine("]");
 }
 
-int [] NewArray(int [] array)
+void NewArray(int [] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
         array [i] = array [i] * (-1); 
     }
-    return array;
 }
 
 int [] arr = CreatArrayRndInt(15, -8, 15);
 PrintArray(arr);
 
-int [] newArr = NewArray(arr);
-PrintArray(newArr);
+NewArray(arr);
+PrintArray(arr);

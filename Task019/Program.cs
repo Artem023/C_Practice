@@ -23,13 +23,13 @@ int number = Convert.ToInt32(Console.ReadLine());
 } */
 
 //Вариант решения №2 (сравнение первых и последних двух чисел)
-bool Palindrom2(int num)
+bool Palindrom1(int num)
 {
     return num / 10000 == num % 10 && num /1000 % 10 == num % 100 / 10;
 }
 if (number > 9999 && number < 100000)
 {
-    bool result = Palindrom2(number);
+    bool result = Palindrom1(number);
     Console.Write($"{number} --> ");
     Console.WriteLine(result ? "Yes" : "No"); // Можно ли как-то строчку №27 записать в строчку №28???
 }
