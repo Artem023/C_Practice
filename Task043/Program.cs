@@ -16,9 +16,8 @@ double k2 = Convert.ToInt32(Console.ReadLine());
 
 void PointCoordinates(double B1, double K1, double B2, double K2)
 {
-    Math mth = new Math();
     double x = (b2 - b1) / (k1 - k2);
-    x = mth.Round(x, 2);
+    x = Math.Round(x, 2);
     double y = x;
     Console.Write($"({x}, {y})");
 }
