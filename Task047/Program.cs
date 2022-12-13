@@ -9,21 +9,22 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter the value of the variable N (columns): ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int [,] CreatMatrixRndInt (int rows, int columns, int min, int max)
+double [,] CreatMatrixRndInt (int rows, int columns, int min, int max)
 {
-    int [,] matrix = new int[rows, columns];
+    double [,] matrix = new double[rows, columns];
     Random rnd = new Random();
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rnd.Next(min, max + 1);
+            matrix[i, j] = rnd.NextDouble() * (max - min) + min;
+            matrix[i, j] = Math.Round(matrix[i, j], 1);
         }
     }
     return matrix;
 }
 
-void PrintMatrix(int [,] matrix)
+void PrintMatrix(double [,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -35,5 +36,5 @@ void PrintMatrix(int [,] matrix)
     }
 }
 
-int [,] matr = CreatMatrixRndInt(m, n, 1, 100);
+double [,] matr = CreatMatrixRndInt(m, n, -10, 10);
 PrintMatrix(matr);
