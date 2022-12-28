@@ -31,20 +31,20 @@ void PrintArray(int [,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j]}, ");
-            else Console.WriteLine($"{matrix[i, j]}, ");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 3}, ");
+            else Console.WriteLine($"{matrix[i, j], 3}, ");
         }
     }
 }
 
 void ArithmeticMean(int [,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(1); i++)
     {
         double result = 0;
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(0); j++)
         {
-            result = result + matrix[i, j];
+            result = result + matrix[j, i];
         }
     
         result = result / (matrix.GetLength(1));

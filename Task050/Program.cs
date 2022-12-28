@@ -44,12 +44,16 @@ void PrintMatrix(int [,] matrix)
     }
 }
 
-int FindPosition(int [,] matrix, int rowPos, int colPos)
+void FindPosition(int [,] matrix, int rowPos, int colPos)
 {
-    return matrix[rowPos - 1, colPos - 1];
+    if (rowPos <= matrix.GetLength(0) 
+    && colPos <= matrix.GetLength(1))
+    {
+        Console.Write(matrix[rowPos, colPos]);
+    }
+    else Console.Write($"{rowPos}, {colPos} --> такого элемента не существует");
 }
 
 int [,] matr = CreatMatrixRndInt(str, col, 1, 10);
 PrintMatrix(matr);
-int res = FindPosition(matr, rowPosition, colPosition);
-Console.Write(matr[rowPosition, colPosition]);
+FindPosition(matr, rowPosition, colPosition);

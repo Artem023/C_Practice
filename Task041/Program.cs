@@ -28,7 +28,7 @@ void PrintArray(int [] array)
     }
 }
 
-void Result (int [] array)
+int  Result (int [] array)
 {
     Console.WriteLine();
     int count = 0;
@@ -36,9 +36,10 @@ void Result (int [] array)
     {
         if (array[i] > 0) count += 1;
     }
-    Console.WriteLine($"The number of numbers greater then zero = {count}");
+    return count;
 }
 
 int [] arr = NewArray(quantity);
 PrintArray(arr);
-Result(arr);
+int res = Result(arr);
+    Console.WriteLine($"The number of numbers greater then zero = {res}");
